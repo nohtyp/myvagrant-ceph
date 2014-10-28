@@ -1,0 +1,1 @@
+I will need to separate the ssh-key from the ceph module and make one just for ssh-keys.  This would allow me to apply the ssh keys to multiple nodes as the admin node needs password-less ssh access to the node servers.  The ceph admin node will have the ceph-deploy rpm installed (good to know for ceph profiles).
