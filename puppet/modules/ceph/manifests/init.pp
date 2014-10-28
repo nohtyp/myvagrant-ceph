@@ -38,9 +38,7 @@
 class ceph ( 
   
   $package_ensure          = $ceph::params::package_ensure,
-  $ceph_service            = $ceph::params::ceph_service,
   $ceph_descr              = $ceph::params::ceph_descr,
-  $is_enabled              = $ceph::params::is_enabled,
   $file_name               = $ceph::params::file_name,
   $ceph_baseurl            = $ceph::params::ceph_baseurl,
   $yum_enabled             = $ceph::params::yum_enabled,
@@ -80,6 +78,5 @@ class ceph (
     class {'::ceph::user':} ->
     class {'::ceph::ssh-key':} ->
     class {'::ceph::require-tty':} ->
-  #    class {'::ceph::service':} ->
   anchor {'ceph::end':}
 }

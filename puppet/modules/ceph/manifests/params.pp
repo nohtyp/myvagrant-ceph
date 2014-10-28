@@ -6,8 +6,6 @@ class ceph::params {
   case $::osfamily {
     'RedHat': {
       $pacakge_ensure       = 'installed'
-      $ceph_service         = 'running'
-      $is_enabled           = true
       $ensure_repo          = 'present'
       $ceph_descr           = 'This repo will host the ceph rpms'
       $file_name            = 'ceph'
