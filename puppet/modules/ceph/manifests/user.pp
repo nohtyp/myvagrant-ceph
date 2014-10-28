@@ -12,7 +12,7 @@ class ceph::user inherits ceph {
     managehome       => $manage_home,
     shell            => $user_shell,
     system           => $is_system_account,
-    require          => Group['ceph_group'],
+    require          => Group[$ceph_group],
   }
 
   group { 'ceph_group':
