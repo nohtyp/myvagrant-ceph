@@ -6,7 +6,8 @@ VAGRANT_TMP_NAME = "rh6_minimal"
 VBGUI = false
 
 nodes = [
-  { :hostname => 'template', :ip => '192.168.2.250', :box => 'rh6_minimal' },
+  { :hostname => 'ceph-deploy', :ip => '192.168.2.250', :box => 'rh6_minimal' },
+  { :hostname => 'ceph', :ip => '192.168.2.251', :box => 'rh6_minimal' },
 ]
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|

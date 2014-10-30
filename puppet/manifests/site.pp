@@ -1,1 +1,1 @@
-include ceph
+include profile::cnode
