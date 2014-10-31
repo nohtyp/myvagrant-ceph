@@ -1,6 +1,6 @@
 class ceph::install inherits ceph {
   
-  package { 'ceph-deploy':
+  package { 'ceph-release':
     ensure => $package_ensure,
   }
 }
