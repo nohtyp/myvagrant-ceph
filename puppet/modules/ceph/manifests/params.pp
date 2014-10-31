@@ -2,14 +2,18 @@ class ceph::params {
 
   $ceph_release = 'firefly'
   $distro       = 'el6'
+  $arch         = "${::architecture}"
 
   case $::osfamily {
     'RedHat': {
       $pacakge_ensure       = 'installed'
       $ensure_repo          = 'present'
       $ceph_descr           = 'This repo will host the ceph rpms'
+      $ceph_descr_noarch    = 'This repo will host the ceph noarch rpms'
       $file_name            = 'ceph'
-      $ceph_baseurl         = "http://ceph.com/rpm-$ceph_release/$distro/noarch"
+      $file_name_noarch     = 'ceph-noarch'
+      $ceph_baseurl         = "http://ceph.com/rpm-$ceph_release/$distro/$arch"
+      $ceph_baseurl_noarch  = "http://ceph.com/rpm-$ceph_release/$distro/noarch"
       $yum_enabled          = '1'
       $gpgcheck             = true
       $gpg_key              = 'https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc'
