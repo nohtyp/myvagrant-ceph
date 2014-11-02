@@ -17,8 +17,9 @@ class ceph::params {
       $yum_enabled          = '1'
       $gpgcheck             = true
       $gpg_key              = 'https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc'
-      $sudo_file            = '/etc/sudoers'
-      $sudo_rule            = 'Defaults:ceph !requiretty'
+      $sudo_file            = 'file'
+      $sudo_d_file          = '/etc/sudoers.d/requirenotty'
+      $sudo_content         = 'Defaults:ceph !requiretty'
       $ensure_sshkey        = 'present'
       $servername           = 'ceph@aeacus.nesdis-hq.noaa.gov'
       $ssh_key              = 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCroYlHZW3Ck2VLaEEGmVNdz9tE8UUKEja7wpi4nXt7lTQK0eKcAtSUkE+j68PgnFYkKooTK28NMTG/RZd6PGPRI3uWzthHl43Wg1yeZSiOBoEIpXivCl4ebHnADnDqoEl5GNFDVghGupKd7RdZjiMzBBUUUf60EZtfphOfstwgQJyfIkKrwB/CuVypJ9LxpUTTtWvdrZD400B2VNdj+vCBBJpizCXtiB0fUDmjm8PHMyaCb0go53Fb5KhWGI/SZSqPbsRu9L8MaS6Gss0zasswQ56OSmUHwIsyQaWBRguHhdugwGh40dj0hIBVBXcb3iRKjpCGkOX7Ov5G2V/Mk1TJ'

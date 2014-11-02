@@ -1,11 +1,11 @@
-I will need to separate the ssh-key from the ceph module and make one just for ssh-keys.  This would allow me to apply the ssh keys to multiple nodes as the admin node needs password-less ssh access to the node servers.  The ceph admin node will have the ceph-deploy rpm installed (good to know for ceph profiles).
+X I will need to separate the ssh-key from the ceph module and make one just for ssh-keys.
 
-I will need to separate the sudo line as this will be installed on all nodes in the ceph cluster.  Sudo access will need to be passwordless for the account used to install application on ceph nodes.
+X I will need to separate the sudo line as this will be installed on all nodes in the cluster.  Sudo access will need to be passwordless for the account used to install application on ceph nodes.
 
 I will also have to write a custom fact to  present repo data as (el6,rhel6 or rhel7) using the operatingsystem fact and majorrelease fact.
 
-I will need to separate the user account so that puppet can create the user on each ceph node.
+X I will need to separate the user account so that puppet can create the user on each ceph node.
 
-I will need to separate out the require-tty class to allow ceph nodes to implement the correct tty for ceph user
+X I will need to separate out the require-tty class to allow ceph nodes to implement the correct tty for ceph user
 
 I will need to set selinux to permissive mode for all nodes and admin node.
