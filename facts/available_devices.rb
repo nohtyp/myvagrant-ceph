@@ -14,5 +14,5 @@ def mydevice(device)
   end
 end
 
-disks = Facter::Util::Resolution.exec('lsblk -n -d -e 11,1').scan(/(sd.)/)
+disks = Facter::Util::Resolution.exec('lsblk -n -d -e 11,1').scan(/(sd\D+)/)
 disks.each { |x| mydevice(x) }
