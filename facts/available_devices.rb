@@ -1,11 +1,12 @@
 require 'facter'
 #
-Facter::Util::Resolution.exec('lsblk -n -d -e 11,1').scan(/(sd\D+)/).each do |disks|
-  is_used = Facter::Util::Resolution.exec('mount').scan("#{disks}".strip)
-  if is_used.empty?
-    Facter.add("unused_disk_#{disks}".strip) do
+Facter::Util::Resolution.exec('lsblk -n -d -e 11,1').scan(/sd\D+/).each do |disk|
+  disk = disk.strip!
+  in_use = Facter::Util::Resolution.exec('mount').include?(disk)
+  if !in_use
+    Facter.add("unused_disk_#{disk}") do
       setcode do
-        disks
+        disk
       end
     end
   end
