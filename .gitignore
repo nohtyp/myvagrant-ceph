@@ -1,3 +1,2 @@
 #exclude everything in vagrant
-.*
-!/.vagrant
+!/.vagrant/*
