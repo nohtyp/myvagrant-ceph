@@ -1,4 +1,4 @@
-class ceph_deploy_node::file inherits ceph_deploy_node {
+class ceph_monitor::file inherits ceph_monitor {
 
   file { $user_home:
     ensure  => $dir_ensure,

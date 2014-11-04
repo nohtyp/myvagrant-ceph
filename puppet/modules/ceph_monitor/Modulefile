@@ -1,4 +1,4 @@
-name    'nohtyp-ceph-deploy-node'
+name    'nohtyp-ceph-monitor'
 version '0.0.1'
 source 'UNKNOWN'
 author 'nohtyp'

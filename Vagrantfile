@@ -6,7 +6,7 @@ VAGRANT_TMP_NAME = "rh6_minimal"
 VBGUI = false
 
 nodes = [
-  { :hostname => 'ceph-deploy', :ip => '192.168.2.250', :box => 'rh6_minimal' },
+  { :hostname => 'ceph-monitor', :ip => '192.168.2.250', :box => 'rh6_minimal' },
   { :hostname => 'ceph', :ip => '192.168.2.251', :box => 'rh6_minimal' },
 ]
 

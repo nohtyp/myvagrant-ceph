@@ -1,4 +1,4 @@
-class ceph_deploy_node::user inherits ceph_deploy_node {
+class ceph_monitor::user inherits ceph_monitor {
 
   user { 'ceph_user':
     ensure           => $user_status,

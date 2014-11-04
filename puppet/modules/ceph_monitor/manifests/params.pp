@@ -1,4 +1,4 @@
-class ceph_deploy_node::params {
+class ceph_monitor::params {
 
   $ceph_release = 'firefly'
   $distro       = 'el6'

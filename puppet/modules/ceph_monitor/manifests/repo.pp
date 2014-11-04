@@ -1,4 +1,4 @@
-class ceph_deploy_node::repo inherits ceph_deploy_node {
+class ceph_monitor::repo inherits ceph_monitor {
 
   yumrepo { $file_name:
     descr    => $ceph_descr,
