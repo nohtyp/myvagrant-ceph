@@ -1,6 +1,6 @@
 class ceph_monitor::install inherits ceph_monitor {
   
-  package { 'ceph-deploy':
+  package { 'ceph':
     ensure => $package_ensure,
   }
 }
