@@ -1,7 +1,7 @@
 class ceph::params {
 
   $ceph_release = 'firefly'
-  $distro       = 'el6'
+  $distro       = 'rhel7'
   $arch         = "${::architecture}"
 
   case $::osfamily {
